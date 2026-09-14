@@ -40,7 +40,7 @@ public class Boundaries {
 		System.out.println("╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝");
 		Thread.sleep(100);
 		System.out.print(ANSI_GRAY);
-		printRoll("(v1.2)", 10);
+		printRoll("(v1.2.1)", 10);
 		System.out.println("");
 		System.out.println(ANSI_RESET);
 		printRoll("Here's how it works:", 10);
@@ -125,7 +125,7 @@ public class Boundaries {
 			}
 			
 			// questionType override
-			questionType = 6;
+			// questionType = 6;
 			
 			String bounds = generateQuestion(questionType, difficulty, questionNum);
 			int indexOfSpace = bounds.indexOf(" ");
