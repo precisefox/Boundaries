@@ -18,48 +18,66 @@ public class Boundaries {
 	    final String ANSI_lPINK = "\u001B[38;2;255;128;255m";
 	
 		Scanner input = new Scanner(System.in);
-		int typingDelay = 100;
 		
-		System.out.println(ANSI_lPURPLE + "****************************************************************************************************");
-		Thread.sleep(typingDelay);
+		System.out.print(ANSI_lPURPLE);
+		printRoll("****************************************************************************************************", 10);
 		System.out.println("");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_RESET + "Hello! This is my first ever Java game: " + ANSI_lPURPLE);
-		Thread.sleep(typingDelay);
+		System.out.println(ANSI_RESET);
+		printRoll("Hello! This is my first ever Java game: ", 10);
+		System.out.println(ANSI_lPURPLE);
 		System.out.println("");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("██████╗  ██████╗ ██╗   ██╗███╗   ██╗██████╗  █████╗ ██████╗ ██╗███████╗███████╗");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("██╔══██╗██╔═══██╗██║   ██║████╗  ██║██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██╔════╝");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("██████╔╝██║   ██║██║   ██║██╔██╗ ██║██║  ██║███████║██████╔╝██║█████╗  ███████╗");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("██╔══██╗██║   ██║██║   ██║██║╚██╗██║██║  ██║██╔══██║██╔══██╗██║██╔══╝  ╚════██║");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("██████╔╝╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝██║  ██║██║  ██║██║███████╗███████║");
-		Thread.sleep(typingDelay);
+		Thread.sleep(100);
 		System.out.println("╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_GRAY + "(v1.1)\n");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_RESET + "Here's how it works:");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_lPURPLE + "1. " + ANSI_lGRAY + "The game will repeatedly ask you to enter a number between two other numbers.");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_lPURPLE + "2. " + ANSI_lGRAY + "The game will time you to see how long it takes you to answer.");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_lPURPLE + "3. " + ANSI_lGRAY + "The faster you answer, the more points you get!");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_lPURPLE + "4. " + ANSI_lGRAY + "Some questions will try to trick you, so be careful!");
-		Thread.sleep(typingDelay);
-		System.out.println(ANSI_lPURPLE + "5. " + ANSI_lGRAY + "If you take more than 5 seconds to answer or answer incorrectly, you lose!");
-		Thread.sleep(typingDelay);
-		System.out.print(ANSI_RESET + "\nType 1 to begin. " + ANSI_lSKY);
+		Thread.sleep(100);
+		System.out.print(ANSI_GRAY);
+		printRoll("(v1.2)", 10);
+		System.out.println("");
+		System.out.println(ANSI_RESET);
+		printRoll("Here's how it works:", 10);
+		System.out.println(ANSI_lPURPLE);
+		printRoll("1. ", 10);
+		System.out.print(ANSI_lGRAY);
+		printRoll("The game will repeatedly ask you to enter numbers that satisfy a given condition.", 10);
+		System.out.println("");
+		System.out.print(ANSI_lPURPLE);
+		printRoll("2. ", 10);
+		System.out.print(ANSI_lGRAY);
+		printRoll("The game will time you to see how long it takes you to answer.", 10);
+		System.out.println("");
+		System.out.print(ANSI_lPURPLE);
+		printRoll("3. ", 10);
+		System.out.print(ANSI_lGRAY);
+		printRoll("The faster you answer, the more points you get!", 10);
+		System.out.println("");
+		System.out.print(ANSI_lPURPLE);
+		printRoll("4. ", 10);
+		System.out.print(ANSI_lGRAY);
+		printRoll("Some questions will try to trick you, so be careful!", 10);
+		System.out.println("");
+		System.out.print(ANSI_lPURPLE);
+		printRoll("5. ", 10);
+		System.out.print(ANSI_lGRAY);
+		printRoll("If you take more than 5 seconds to answer or answer incorrectly, you lose!", 10);
+		System.out.println("");
+		System.out.println(ANSI_RESET);
+		printRoll("Input 1 to begin. ", 10);
+		System.out.print(ANSI_lSKY);
 		double answer = input.nextInt();
 		if (answer == 1) { 
+			System.out.println(ANSI_lPURPLE);
+			printRoll("****************************************************************************************************", 10);
 			System.out.println("");
-			System.out.println(ANSI_lPURPLE + "****************************************************************************************************");
-			System.out.println(""); 
+			System.out.println("");
 		} else { 
 			System.out.println(0 / 0);
 		}
@@ -77,12 +95,15 @@ public class Boundaries {
 		/*
 		 * Question types!
 		 * 1. Default a < x < b
-		 * 2. Tricky a > x < b (both are maximums)
-		 * 3. Tricky a < x > b (both are minimums)
-		 * 4. Tricky b > x > a (reverse)
+		 * 
+		 * 2. (2) Tricky a > x < b (both are maximums)
+		 * 3. (2) Tricky a < x > b (both are minimums)
+		 * 4. (2) Tricky b > x > a (reverse)
+		 * 5. (5) Decimals
+		 * 6. (3) a < x + c < b
 		 */
 		
-		while (gameActive == true) {
+		while (gameActive) {
 			
 			if (difficulty >= 1000) {
 				trickQuestionChance = 50;
@@ -91,10 +112,20 @@ public class Boundaries {
 			}
 			
 			if ((Math.random() * 100) < trickQuestionChance) {
-				questionType = (int)(Math.random() * 3) + 2;
+				int questionRandomizer = (int)(Math.random() * 14) + 1;
+				if (questionRandomizer <= 6) {
+					questionType = (int)(Math.random() * 3) + 2;
+				} else if (questionRandomizer <= 11) {
+					questionType = 5;
+				} else {
+					questionType = 6;
+				}
 			} else {
 				questionType = 1;
 			}
+			
+			// questionType override
+			questionType = 6;
 			
 			String bounds = generateQuestion(questionType, difficulty, questionNum);
 			int indexOfSpace = bounds.indexOf(" ");
@@ -109,20 +140,29 @@ public class Boundaries {
 			
 			if (timeSpent > timeLimit) {
 				
-				System.out.println(ANSI_lRED + "GAME OVER: Out of time! (" + timeSpent + "s)" + ANSI_RESET);
-				System.out.println(ANSI_lPURPLE + "Final Score: " + ANSI_RESET + score);
+				System.out.print(ANSI_lRED);
+				printRoll("GAME OVER: Out of time! (" + timeSpent + "s)", 10);
+				System.out.println(ANSI_RESET);
+				System.out.print(ANSI_lPURPLE);
+				printRoll("Final Score: ", 10);
+				System.out.print(ANSI_RESET);
+				printRoll("" + score, 10);
 				gameActive = false;
 				
 			} else {
 			
-				if (checkAnswer(questionType, answer, minimum, maximum) == true) {
+				if (checkAnswer(questionType, answer, minimum, maximum)) {
 				
-					System.out.println(ANSI_GRAY + "Correct." + " (" + timeSpent + "s)" + ANSI_RESET);
+					System.out.print(ANSI_GRAY);
+					printRoll("Correct." + " (" + timeSpent + "s)", 10);
+					System.out.println(ANSI_RESET);
 				
 					if ((questionType >= 2) && (questionType <= 4)) {
-						bonus = 5;
-					} else if ((questionType == 1) && (maximum - minimum == 1)) {
 						bonus = 2;
+					} else if ((questionType == 1) && (maximum - minimum == 1)) {
+						bonus = 1.5;
+					} else if (questionType == 5) {
+						bonus = 3;
 					} else {
 						bonus = 1;
 					}
@@ -134,27 +174,38 @@ public class Boundaries {
 				
 					score = (Math.round(score));
 					if (bonus != 1) {
-						System.out.println(ANSI_lPINK + "Bonus: x" + bonus + ANSI_lPURPLE);
+						System.out.print(ANSI_lPINK);
+						printRoll("Bonus: x" + bonus, 10);
+						System.out.println(ANSI_lPURPLE);
 					}
 					if (scoreAdd < 0) {
-						System.out.println(
-								ANSI_lPURPLE + "Score: " 
-								+ ANSI_RESET + score 
-								+ ANSI_lPURPLE + " (" + scoreAdd + ")" 
-								+ ANSI_RESET);
+						System.out.print(ANSI_lPURPLE);
+						printRoll("Score: ", 10);
+						System.out.print(ANSI_RESET);
+						printRoll("" + score, 10);
+						System.out.print(ANSI_lPURPLE);
+						printRoll(" (" + scoreAdd + ")", 10);
+						System.out.println(ANSI_RESET);
 					} else {
-						System.out.println(
-								ANSI_lPURPLE + "Score: " 
-								+ ANSI_RESET + score 
-								+ ANSI_lPURPLE + " (+" + scoreAdd + ")" 
-								+ ANSI_RESET);
+						System.out.print(ANSI_lPURPLE);
+						printRoll("Score: ", 10);
+						System.out.print(ANSI_RESET);
+						printRoll("" + score, 10);
+						System.out.print(ANSI_lPURPLE);
+						printRoll(" (+" + scoreAdd + ")", 10);
+						System.out.println(ANSI_RESET);
 					}
 					System.out.println("");
 				
 				} else {
 					
-					System.out.println(ANSI_lRED + "GAME OVER: Incorrect Answer!" + ANSI_RESET);
-					System.out.println(ANSI_lPURPLE + "Final Score: " + ANSI_RESET + score);
+					System.out.print(ANSI_lRED);
+					printRoll("GAME OVER: Incorrect Answer!", 10);
+					System.out.println(ANSI_RESET);
+					System.out.print(ANSI_lPURPLE);
+					printRoll("Final Score: ", 10);
+					System.out.print(ANSI_RESET);
+					printRoll("" + score, 10);
 					gameActive = false;
 					
 				}
@@ -167,7 +218,7 @@ public class Boundaries {
 
 	}
 	
-	public static String generateQuestion(int questionType, double difficulty, int questionNum) {
+	public static String generateQuestion(int questionType, double difficulty, int questionNum) throws InterruptedException {
 		if (questionType == 1) {
 			
 			int upperBound = (int)(100 + difficulty);
@@ -188,15 +239,19 @@ public class Boundaries {
 			// debugging
 			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
 			
-			System.out.print(
-					ANSI_RESET + "#" + questionNum + ") " 
-					+ ANSI_lGRAY + "Enter a number where " 
-					+ ANSI_lPURPLE 
-					+ minimum 
-					+ ANSI_RESET + " < x < " 
-					+ ANSI_lPURPLE + maximum 
-					+ ANSI_RESET + ": " 
-					+ ANSI_lSKY);
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(" < x < ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
 			
 			String output = minimum + " " + maximum;
 			
@@ -222,15 +277,19 @@ public class Boundaries {
 			// debugging
 			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
 			
-			System.out.print(
-					ANSI_RESET + "#" + questionNum + ") " 
-					+ ANSI_lGRAY + "Enter a number where " 
-					+ ANSI_lPURPLE 
-					+ minimum 
-					+ ANSI_RESET + " > x < " 
-					+ ANSI_lPURPLE + maximum 
-					+ ANSI_RESET + ": " 
-					+ ANSI_lSKY);
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(" > x < ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
 			
 			String output = minimum + " " + maximum;
 			
@@ -256,15 +315,19 @@ public class Boundaries {
 			// debugging
 			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
 			
-			System.out.print(
-					ANSI_RESET + "#" + questionNum + ") " 
-					+ ANSI_lGRAY + "Enter a number where " 
-					+ ANSI_lPURPLE 
-					+ minimum 
-					+ ANSI_RESET + " < x > " 
-					+ ANSI_lPURPLE + maximum 
-					+ ANSI_RESET + ": " 
-					+ ANSI_lSKY);
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(" < x > ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
 			
 			String output = minimum + " " + maximum;
 			
@@ -290,23 +353,104 @@ public class Boundaries {
 			// debugging
 			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
 			
-			System.out.print(
-					ANSI_RESET + "#" + questionNum + ") " 
-					+ ANSI_lGRAY + "Enter a number where " 
-					+ ANSI_lPURPLE 
-					+ minimum 
-					+ ANSI_RESET + " > x > " 
-					+ ANSI_lPURPLE + maximum 
-					+ ANSI_RESET + ": " 
-					+ ANSI_lSKY);
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(" > x > ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
 			
 			String output = maximum + " " + minimum;
 			
 			return output;
 			
 		} else if (questionType == 5) {
-			return "";
+			
+			int upperBound = (int)(100 + difficulty);
+			int lowerBound = 0 - upperBound;
+			double randomValue1 = Math.random() * (upperBound - lowerBound) - upperBound + 1;
+			double randomValue2 = randomValue1 + (Math.random() * (Math.ceil(randomValue1) - 0.001 - randomValue1)) + 0.001;
+			
+			double minimum = (int)(Math.min(randomValue1, randomValue2) * 1000) / 1000.0;
+			double maximum = (int)(Math.max(randomValue1, randomValue2) * 1000) / 1000.0;
+			
+			final String ANSI_RESET = "\u001B[0m";
+		    final String ANSI_lGRAY = "\u001B[38;2;191;191;191m";
+		    final String ANSI_lSKY = "\u001B[38;2;128;191;255m";
+		    final String ANSI_lPURPLE = "\u001B[38;2;191;128;255m";
+			
+			// debugging
+			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
+			
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(" < x < ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
+			
+			String output = minimum + " " + maximum;
+			
+			return output;
+			
 		} else if (questionType == 6) {
+			
+			int upperBound = (int)(100 + difficulty);
+			int lowerBound = 0 - upperBound;
+			int offset = (int)Math.round((Math.random() * 0.1 + 0.1) * upperBound);
+			int addOrSubtract = (int)(Math.random() * 2);
+			double range = 100 * Math.pow(2, ((0 - questionNum) / 20.0));		
+			int finalRange = (int)(range * Math.random() + 1);
+			int randomValue1 = (int)(Math.random() * (upperBound - lowerBound) - upperBound + 1);
+			int randomValue2 = (int)(randomValue1 + finalRange);
+			
+			int minimum = Math.min(randomValue1, randomValue2);
+			int maximum = Math.max(randomValue1, randomValue2);
+			
+			final String ANSI_RESET = "\u001B[0m";
+		    final String ANSI_lGRAY = "\u001B[38;2;191;191;191m";
+		    final String ANSI_lSKY = "\u001B[38;2;128;191;255m";
+		    final String ANSI_lPURPLE = "\u001B[38;2;191;128;255m";
+			
+			// debugging
+			// System.out.println(ANSI_lSKY + "[UB: " + (int)(upperBound) + "], [Range: " + (int)(range) + "]" + ANSI_RESET);
+			
+		    System.out.print(ANSI_RESET);
+		    printRoll("#" + questionNum + ") ", 10);
+		    System.out.print(ANSI_lGRAY);
+		    printRoll("Enter a number where ", 10);
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + minimum, 10);
+		    System.out.print(ANSI_RESET);
+		    if (addOrSubtract == 0) { printRoll(" < (x + " + offset + ") < ", 10); } else {
+		    	printRoll(" < (x - " + offset + ") < ", 10); }
+		    System.out.print(ANSI_lPURPLE);
+		    printRoll("" + maximum, 10);
+		    System.out.print(ANSI_RESET);
+		    printRoll(": ", 10);
+		    System.out.print(ANSI_lSKY);
+			
+		    String output;
+		    if (addOrSubtract == 0) { output = (minimum - offset) + " " + (maximum - offset); } else {
+		    	output = (minimum + offset) + " " + (maximum + offset); }
+			
+			return output;
+			
+		} else if (questionType == 7) {
 			return "";
 		} else {
 			return "";
@@ -347,12 +491,32 @@ public class Boundaries {
 			}
 			
 		} else if (questionType == 5) {
-			return false;
+			if ((minimum < answer) && (answer < maximum)) {
+				return true;
+			} else {
+				return false;
+			}
 		} else if (questionType == 6) {
+			if ((minimum < answer) && (answer < maximum)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else if (questionType == 7) {
 			return false;
 		} else {
 			return false;
 		}
+	}
+	
+	public static void printRoll(String str, int delayMilliseconds) throws InterruptedException {
+		int a = 0;
+		for (int i = 0; i < str.length(); i++) {
+			System.out.print(str.charAt(a));
+			a++;
+			Thread.sleep(delayMilliseconds);
+		}
+
 	}
 
 }
